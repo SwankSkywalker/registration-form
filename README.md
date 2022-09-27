@@ -1,3 +1,3 @@
 # registration-form
 
-Registration form project based on The Odin Project Curriculumgit 
+Registration form project based on The Odin Project Curriculum
