@@ -1,1 +1,48 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+}
+
+.main-content {
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-content, .logo {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.bg-image {
+    background-image: url(../assets/simon-lee-BRHLD4L1Hag-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+}
+
+.logo {
+    height: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 47vh;
+
+}
+
+h1 {
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dd-logo {
+    width: 25px;
+    height: 25px;
+}
