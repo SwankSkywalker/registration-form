@@ -18,16 +18,17 @@
         </div>
         <div class="right-side">
             <div class="info-text left">
-                <p>This is not a real online service! Sure does look like it could be one though huh?</p>
+                <p>This is not a real online service! Sure does look like it could be one though. This is where dreams are made. This is <b>Da Vinci</b>.</p>
                 <p>Go ahead, sign up!</p>
-                <p>I <em>know</em> you want to!</p>
+                <br>
+                <p>I <b><em>know</em></b> you want to!</p>
             </div>
             <form action="#">
-                <p class="form-title">What secrets will you discover?</p>
                 <fieldset class="form-entries">
+                    <p class="form-title">What secrets will you discover?</p>
                     <div class="form-group">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="firstName" id="first-name" required>
+                        <input type="text" name="firstName" id="first-name" autofocus required>
                     </div>
                     <div class="form-group">
                         <label for="last-name">LAST NAME</label>
@@ -39,7 +40,7 @@
                     </div>
                     <div class="form-group">
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="number" name="phoneNumber" id="phone-number" required>
+                        <input type="text" name="phoneNumber" id="phone-number" minlength="10" maxlength="10" required>
                     </div>
                     <div class="form-group">
                         <label for="password">PASSWORD</label>
@@ -53,7 +54,7 @@
                 <button type="submit">Beam me up Scotty!</button>
             </form>
             <div class="returning-user left">
-                <p>Already have an account?<a href="http://#"> Login Here</a></p>
+                <p>Already have an account?<a href="http://#" class="login"> Log in</a></p>
             </div>
         </div>
     </div>
