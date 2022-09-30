@@ -23,7 +23,7 @@
                 <br>
                 <p>I <b><em>know</em></b> you want to!</p>
             </div>
-            <form action="#">
+            <form action="#" id="form" >
                 <fieldset class="form-entries">
                     <p class="form-title">What secrets will you discover?</p>
                     <div class="form-group">
@@ -44,13 +44,25 @@
                     </div>
                     <div class="form-group">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="userPassword" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
-                        <p class="entry-error"></p>
+                        <input type="password" name="userPassword" id="password" required>
+                        <p class="error-para pass-error">
+                            <span class="charMin">❌</span>
+                             Minimum 8 characters 
+                            <br>
+                            <span class="oneNum">❌</span>
+                             At least one number 
+                            <br>
+                            <span class="specChar">❌</span>
+                             At least one special character 
+                            <br>
+                        </p>
                     </div>
                     <div class="form-group">
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirmPassword" id="confirm-password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
-                        <p class="password-match"></p>
+                        <input type="password" name="confirmPassword" id="confirm-password" required>
+                        <p class=" error-para pass-confirm-error">
+
+                        </p>
                     </div>
                 </fieldset>
                 <button type="submit">Beam me up Scotty!</button>
