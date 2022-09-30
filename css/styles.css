@@ -13,6 +13,7 @@
     --txt: #ffffff;
     --txt2: rgb(240,255,255);
     --shadow2: 0 0 10px 5px rgba(150,200,245,0.12);
+    --invalid :#e54040;
 
 }
 
@@ -67,7 +68,7 @@ h1 {
     display: flex;
     flex-flow: column nowrap;
     width: 60vw;
-    margin-top: -85px;
+    margin-top: -50px;
     padding: 0 2rem 0 2rem;
     justify-content: center;
     color: var(--txt2);
@@ -125,6 +126,10 @@ input {
     
 }
 
+/* input:invalid {
+    border: 2px solid var(--invalid);
+} */
+
 input:focus {
     border: solid 2px limegreen;
     box-shadow: var(--shadow2);
@@ -165,6 +170,7 @@ button:hover {
 .login {
     color: limegreen;
     text-decoration: none;
+    padding: 5px 5px;
 }
 
 .login:hover {
@@ -175,4 +181,12 @@ button:hover {
 footer{
     display: flex;
     justify-content: center;
+    width: 100%;
+    padding: 20px 10px;
+    font-family: var(--main-font);
+    background-color: ;
+}
+
+footer a {
+    text-decoration: none;
 }
