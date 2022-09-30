@@ -93,12 +93,14 @@ h1 {
     /* padding-bottom: 1.5rem; */
 }
 
+
+
 .form-entries{
     border-style: none;
     display: flex;
     flex-flow: wrap;
     gap: 20px;
-    padding: 20px 0 20px 0;
+    padding: 50px 50px;
     box-shadow: var(--soft-shadow);
     border-radius: 10px;
 }
@@ -126,9 +128,6 @@ input {
     
 }
 
-/* input:invalid {
-    border: 2px solid var(--invalid);
-} */
 
 input:focus {
     border: solid 2px limegreen;
@@ -184,7 +183,6 @@ footer{
     width: 100%;
     padding: 20px 10px;
     font-family: var(--main-font);
-    background-color: ;
 }
 
 footer a {
