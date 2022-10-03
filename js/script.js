@@ -21,15 +21,11 @@ password.addEventListener('input', () => {
     const charSpec = document.querySelector('.specChar');
     if (password.value.trim().length >= 8) {
         minChar.textContent = '✅';
-    } else {
-        return;
-    }
+    } 
     const numYes = /\d/.test(password.value);
     if (numYes) {
         numOne.textContent = '✅';
-    } else {
-        return;
-    }
+    } 
     const specYes = /\W|_/g.test(password.value);
     if (specYes) {
         charSpec.textContent = '✅';
@@ -47,6 +43,13 @@ password.addEventListener('focusout', () => {
     }
 })
 
+confirmPass.addEventListener('focusout', () => {
+    if (password.value.trim() !== '') {
+        if (confirmPass.value !== password.value) {
+            confirmPass.classList.add('invalid-input');
+            confirmValidPass.textContent = '⚠️Passwords do not match';
+        }}
+})
 
 confirmPass.addEventListener('focusin', () => {
     if (confirmPass.classList.contains('invalid-input')){
@@ -55,18 +58,9 @@ confirmPass.addEventListener('focusin', () => {
     confirmValidPass.textContent = '';
 })
 
-confirmPass.addEventListener('focusout', () => {
-    if (confirmPass.value.trim() !== '' || confirmPass.value.trim() !== password.value) {
-        confirmPass.classList.add('invalid-input');
-    }
-    confirmValidPass.textContent = '⚠️Passwords do not match';
-})
-
 btn.addEventListener('click', () => {
-    if (confirmPass.value.trim() === password.value.trim() && /\d/.test(password.value) && password.value.trim() >= 8 && /\W|_/g.test(password.value)) {
+    if (confirmPass.value === password.value && (/\d/.test(password.value) && password.value.trim() >= 8 && /\W|_/g.test(password.value))) {
         form.submit()
     }
     else return 0;
 })
-
-// functions to run on when different events are triggered
