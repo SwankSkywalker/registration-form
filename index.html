@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="main-content">
+    <main class="main-content">
         <div class="bg-image">
             <div class="logo">
                 <img src="./assets/dd-logo.png" alt="D3 Travel logo" class="dd-logo">
@@ -23,7 +23,7 @@
                 <br>
                 <p>I <b><em>know</em></b> you want to!</p>
             </div>
-            <form action="#" id="form" >
+            <form action="#" class="form">
                 <fieldset class="form-entries">
                     <p class="form-title">What secrets will you discover?</p>
                     <div class="form-group">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="userPassword" id="password" required>
+                        <input type="password" name="userPassword" id="password" class required>
                         <p class="error-para pass-error">
                             <span class="charMin">❌</span>
                              Minimum 8 characters 
@@ -59,10 +59,8 @@
                     </div>
                     <div class="form-group">
                         <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirmPassword" id="confirm-password" required>
-                        <p class=" error-para pass-confirm-error">
-
-                        </p>
+                        <input type="password" name="confirmPassword" id="confirm-password" class required>
+                        <p class="error-para pass-confirm-error"></p>
                     </div>
                 </fieldset>
                 <button type="submit">Beam me up Scotty!</button>
@@ -71,7 +69,7 @@
                 <p>Already have an account?<a href="http://#" class="login"> Log in</a></p>
             </div>
         </div>
-    </div>
+    </main>
     <footer>
         <p>Crafted by: <a href="https://github.com/SwankSkywalker"> SwankSkywalker</a> 2022</p>
     </footer>
