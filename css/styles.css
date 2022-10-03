@@ -85,6 +85,7 @@ h1 {
 }
 
 .form-title {
+    display: flex;
     margin-left: 2rem;
     width: 100%;
     font-size: 1.5rem;
@@ -100,7 +101,7 @@ h1 {
     display: flex;
     flex-flow: wrap;
     gap: 20px;
-    padding: 50px 50px;
+    padding: 20px 20px;
     box-shadow: var(--soft-shadow);
     border-radius: 10px;
 }
@@ -136,6 +137,20 @@ input:focus {
 
 input:focus-visible {
     outline: none;
+}
+
+main .form .form-entries .invalid-input {
+    border: solid 2px #e54040;
+}
+
+.pass-error {
+    visibility: hidden;
+    font-size: x-small;
+}
+
+.pass-focus {
+    visibility: visible;
+    font-size: x-small;
 }
 
 button {
