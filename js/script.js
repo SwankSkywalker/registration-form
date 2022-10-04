@@ -4,7 +4,6 @@ const password = document.querySelector('#password');
 const confirmPass = document.querySelector('#confirm-password');
 const passValid = document.querySelector('.pass-error');
 const confirmValidPass = document.querySelector('.pass-confirm-error');
-const btn = document.querySelector('button');
 
 
 //renders password requirements visible in the DOM
@@ -59,7 +58,7 @@ confirmPass.addEventListener('focusout', () => {
             confirmValidPass.textContent = '⚠️Passwords do not match';
         }}
 });
-
+//removes invalid-input class when input is in focus
 confirmPass.addEventListener('focusin', () => {
     if (confirmPass.classList.contains('invalid-input')){
         confirmPass.classList.remove('invalid-input');
@@ -67,8 +66,10 @@ confirmPass.addEventListener('focusin', () => {
     confirmValidPass.textContent = '';
 });
 
-btn.addEventListener('click', () => {
-    if (confirmPass.value === password.value && (/\d/.test(password.value) && password.value.trim() >= 8 && /\W|_/g.test(password.value))) {
-        form.submit();
+//Prevents form from submitting if passwords !match
+form.addEventListener('submit', (e) => {
+    if (confirmPass.value !== password.value) {
+        e.preventDefault();
+        alert('Passwords do not match');
     }
 });
