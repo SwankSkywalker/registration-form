@@ -78,10 +78,15 @@ h1 {
 }
 
 .info-text {
+    width: 75%;
     margin-top: 50px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding-bottom: 6rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-bottom: 4rem;
+}
+
+b {
+    color: limegreen;
 }
 
 .form-title {
@@ -118,6 +123,11 @@ label {
     font-weight: 500;
     padding-bottom: 5px;
     
+}
+
+label::after {
+    content: ' *';
+    color: var(--invalid);
 }
 
 input {
@@ -196,7 +206,7 @@ footer{
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 20px 10px;
+    padding: 10px 5px;
     font-family: var(--main-font);
 }
 
