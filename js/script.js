@@ -7,7 +7,7 @@ const confirmValidPass = document.querySelector('.pass-confirm-error');
 const btn = document.querySelector('button');
 
 
-//
+//renders password requirements visible in the DOM
 password.addEventListener('focusin', () => {
   if (password.classList.contains('invalid-input')) {
     password.classList.remove('invalid-input');
@@ -15,25 +15,34 @@ password.addEventListener('focusin', () => {
   passValid.classList.add('pass-focus');
 });
 
+//Verifies that each requirement is met 
+//Functional but still working on the logic(to make inputs work in any order)
 password.addEventListener('input', () => {
-    const minChar = document.getElementById('.charMin');
+    const minChar = document.querySelector('.charMin');
     const numOne = document.querySelector('.oneNum');
     const charSpec = document.querySelector('.specChar');
+
     if (password.value.trim().length >= 8) {
         minChar.textContent = '✅';
-    } 
+    } else {
+        return minChar.textContent = '❌';
+    }
+
     const numYes = /\d/.test(password.value);
     if (numYes) {
         numOne.textContent = '✅';
-    } 
+    } else {
+        return numOne.textContent = '❌';
+    }
+
     const specYes = /\W|_/g.test(password.value);
     if (specYes) {
         charSpec.textContent = '✅';
     } else {
-        return;
+        return charSpec.textContent = '❌';
     }
-})
-
+});
+//Test password value to ensure all requirements are met if input is not empty
 password.addEventListener('focusout', () => {
     passValid.classList.remove('pass-focus');
     if (/\d/.test(password.value) && password.value.trim().length >= 8 && /\W|_/g.test(password.value)) {
@@ -41,26 +50,25 @@ password.addEventListener('focusout', () => {
     } else if (password.value.trim() !== '') {
         password.classList.add('invalid-input');
     }
-})
-
+});
+//Checks if password confirmation matches the password if field is not empty 
 confirmPass.addEventListener('focusout', () => {
     if (password.value.trim() !== '') {
         if (confirmPass.value !== password.value) {
             confirmPass.classList.add('invalid-input');
             confirmValidPass.textContent = '⚠️Passwords do not match';
         }}
-})
+});
 
 confirmPass.addEventListener('focusin', () => {
     if (confirmPass.classList.contains('invalid-input')){
         confirmPass.classList.remove('invalid-input');
     } 
     confirmValidPass.textContent = '';
-})
+});
 
 btn.addEventListener('click', () => {
     if (confirmPass.value === password.value && (/\d/.test(password.value) && password.value.trim() >= 8 && /\W|_/g.test(password.value))) {
-        form.submit()
+        form.submit();
     }
-    else return 0;
-})
+});
